@@ -74,7 +74,7 @@ main {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 1;
+	z-index: 3;
 	
 	.artistImageFramed{
 		position: relative;
@@ -189,7 +189,10 @@ video {
 		color:#4a24fe; 
 	}
 }
+.page-id-51  {
 
+	background-image: url(images/xarchieback.png); 
+}
 //single artist pages
 
 .backgroundtile {
@@ -200,36 +203,48 @@ video {
 	display: block;
 	width:100%;
 	height: 100vh;
-filter: sepia(100%) brightness(57%) hue-rotate(199deg) saturate(484%) contrast(1000%);
--webkit-filter: sepia(100%) brightness(57%) hue-rotate(199deg) saturate(484%) contrast(1000%);
--moz-filter: sepia(100%) brightness(57%) hue-rotate(199deg) saturate(484%) contrast(1000%);
+// filter: sepia(100%) brightness(57%) hue-rotate(199deg) saturate(484%) contrast(1000%);
+// -webkit-filter: sepia(100%) brightness(57%) hue-rotate(199deg) saturate(484%) contrast(1000%);
+// -moz-filter: sepia(100%) brightness(57%) hue-rotate(199deg) saturate(484%) contrast(1000%);
+// }
+	filter: sepia(68%) hue-rotate(39deg) saturate(774%) invert(100%);
+	-webkit-filter: sepia(68%) hue-rotate(39deg) saturate(774%) invert(100%);
+	-moz-filter: sepia(68%) hue-rotate(39deg) saturate(774%) invert(100%);
+
 }
-.singleArtistTile::before {
-	filter: grayscale(100%);
+.artistSingle {
+	width:75%;
 }
 .artistSingleMain {
 	margin: 0 auto;
-	width: 65%;
-	padding-top: 40px;
 	h1 {
 		@include fontSize(35);
 		color: white;
 		text-shadow: #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 50px, -7px 5px 8px #E32ABA;
 		margin:0;
+		text-align: center;
+		position: relative;
+		top: 20px;
+		// z-index: 2;
 	}
-	figure {
-		width: 100%;
-		img {
-			max-width: 700px;
+	.artistSingleContent {
+		// position: relative;
+		// top: -30px;
+		// z-index: 0;
+		figure {
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+	}
 
-			height: auto;
-		}
 	}
 }
 
 .social {
 	position: fixed;
 	top:50%;
+	left:25px;
 	max-width: 130px;
 
 	a {
