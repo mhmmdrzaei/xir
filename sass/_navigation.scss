@@ -1,0 +1,32 @@
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+header {
+	position: absolute;
+}
+ul.menu {
+	
+	margin: 15px 25px;
+	padding: 0;
+	li {
+		position: fixed;
+		list-style: none;
+		a {
+			font-family: 'Pinyon Script', cursive;
+			@include fontSize(28);
+			color: white;
+		}
+	}
+	li:nth-child(2) {
+		right: 25px;
+	}
+	li:nth-child(3) {
+		bottom: 15px;
+		left: 25px;
+	}
+	li:nth-child(4) {
+		bottom: 15px;
+		right: 25px;
+	}
+}
