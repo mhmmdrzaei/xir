@@ -73,6 +73,15 @@ function project_scripts() {
     true //load in footer
   );
 
+  	wp_deregister_script('bxsliderjs');
+    wp_enqueue_script(
+    	'bxslidejs',
+    	"https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js",
+    	false, //dependencies
+    	null, //version number
+    	true //load in footer
+    );
+
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
@@ -267,3 +276,36 @@ function is_blog () {
 	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
 }
 
+
+// Register a slider block.
+add_action('acf/init', 'my_register_blocks');
+function my_register_blocks() {
+
+    // check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'slider',
+            'title'             => __('Slider'),
+            'description'       => __('A custom slider block.'),
+            'render_template'   => 'template-parts/blocks/slider/slider.php',
+			'category'          => 'formatting',
+			'icon' 				=> 'images-alt2',
+			'align'				=> 'full',
+			'enqueue_assets' 	=> function(){
+				// wp_enqueue_style( 'slick', 'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1' );
+				// wp_enqueue_style( 'slick-theme', 'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array(), '1.8.1' );
+				// wp_enqueue_script( 'slick', 'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true );
+				wp_enqueue_style('bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css');
+				wp_enqueue_script(
+					'bxslidejs',
+					"https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js",array('jquery'), '4.2.15', true 
+				);
+
+				// wp_enqueue_style( 'block-slider', get_template_directory_uri() . '/template-parts/blocks/slider/slider.css', array(), '1.0.0' );
+				wp_enqueue_script( 'block-slider', get_template_directory_uri() . '/template-parts/blocks/slider/slider.js', array(), '1.0.0', true );
+			  },
+        ));
+    }
+}

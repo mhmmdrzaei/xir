@@ -10,7 +10,7 @@
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
-@import 'sidebar';
+@import 'slider';
 @import 'comments';
 @import 'footer';
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;600&family=Pinyon+Script&display=swap');
@@ -31,6 +31,10 @@ Default Styling
 
 body {
 	font-family: 'Kumbh Sans', sans-serif;
+}
+a {
+	color:black;
+	font-weight: 600;
 }
 
 .container {
@@ -232,12 +236,15 @@ video {
 		// top: -30px;
 		// z-index: 0;
 		figure {
+			margin: 0 auto;
 			img {
 				max-width: 100%;
 				height: auto;
 			}
 	}
-
+	p {
+		background: white;
+	}
 	}
 }
 
@@ -255,8 +262,25 @@ video {
 	}
 }
 
+//about Page 
 
+.aboutPage {
+	padding-top: 10vw;
 
+	.wp-block-columns, p {
+		background: #e32aba;
+		padding: 0 4px;
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+
+//apply page 
+
+.page-id-18 {
+	background: #e32aba;
+}
 
 
 

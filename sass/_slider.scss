@@ -1,0 +1,132 @@
+// .slider {
+//     padding: 0 0 5px;
+//     width: 100%;
+   
+
+//     .slides {
+
+//         img {
+//             height: auto;
+//             max-height: 800px;
+//             width: 100%;
+//             margin: 0 auto;
+//             max-width: 750px;
+//             padding: 2vh 10vh;
+//         }
+//     }
+
+//     // Fix selectable bug.
+//     &.is-admin {
+//         &:before {
+//             display: block;
+//             content: "";
+//             top: 0;
+//             left: 0;
+//             right: 0;
+//             bottom: 40px;
+//             position: absolute;
+//             z-index: 1;
+//         }
+//     }
+// }
+
+// .slick-prev:before, .slick-next:before{
+//     font-family: 'Kumbh Sans', sans-serif;
+//     font-size: 44px !important;
+//     line-height: 1;
+//     opacity: 1 !important;
+//     color: white;
+//     // z-index: 4 !important;
+//     text-shadow: 1px 1px 1px black;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//     /* position: relative; */
+
+// }
+
+// //bx-slider
+
+//bxslider 
+
+.bx-wrapper img {
+    margin: 0 auto;
+    // max-width: 650px !important;
+    max-height: 78vh !important;
+    height: auto !important;
+    width: auto !important;
+}
+video {
+  // display: block;
+  margin: 0px auto;
+  cursor: pointer;
+  min-height: 250px;
+  width: 100%;
+  outline: none;
+
+}
+button.play {
+    height: 0px;
+    position: relative;
+    top:-3em;
+    background: transparent;
+    border: none;
+}
+.play:after {
+    content: "▶";
+    @include fontSize(15);
+
+
+}
+.playing:after {
+    content:"| |";
+    font-weight: 900;
+    @include fontSize(12);
+}
+
+.bx-wrapper .bx-prev {
+    left: -5px !important;
+}
+
+.bx-wrapper .bx-pager {
+    color: white !important;
+    text-shadow: 1px 1px 1px black;
+ }
+.bx-wrapper{
+    padding: 5px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    margin: 30px auto 0 !important;
+    // padding-bottom: 20px !important;
+}
+.bx-prev {
+    background: none !important;
+    // content:'←' !important;
+    // cursor: w-resize !important;
+}
+.bx-next {
+    background: none !important;
+    // content:'←' !important;
+    // cursor: e-resize !important;
+}
+.bx-default-pager {
+    padding: 0 !important;
+    // position: inherit !important;
+    // display: none !important;
+}
+.bx-controls-direction {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    // position: inherit !important;
+    @include fontSize(15);
+    text-decoration: none;
+    padding: 16px 10px;
+    text-indent: 0 !important;
+    color: white;
+    text-shadow:1px 1px 1px black;
+
+}
