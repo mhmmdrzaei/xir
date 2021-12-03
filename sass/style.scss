@@ -279,8 +279,34 @@ video {
 //apply page 
 
 .page-id-18 {
-	background: #e32aba;
+	background: #96d5ef;
+}
+.pageApply {
+	padding-top: 75px;
+	.acf-fields > .acf-field {
+		border-top:none;
+	}
+	.acf-input {
+		border: 1px solid black;
+	}
+	.af-field-type-radio, .af-field-type-checkbox, .af-field-type-file, .af-field-type-message {
+		.acf-input {
+			border: none;
+		}
+	}
+
+	.af-field-type-message {
+		.acf-label {
+			@include fontSize(20);
+			font-family: 'Pinyon Script', cursive;
+		}
+	}
 }
 
-
-
+.af-submit-button {
+	background: black;
+    color: white;
+    padding: 2px 10px;
+    @include fontSize(20);
+    font-family: 'Pinyon Script', cursive;
+}
