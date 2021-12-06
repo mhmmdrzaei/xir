@@ -2,7 +2,7 @@
 
 <?php get_header();  ?>
 <!-- <video crossorigin="anonymous" preload="auto" autoplay="" src="/gcs/national-parks-service/en-us/9f885369-a52a-4a0b-8b2f-f3e5e41cdd54.mp4" style="width: 1090px; height: 613px; position: absolute; top: 0px; left: -228px;"></video> -->
-<main>
+<main class="artistspage">
      <?php $args = array( 'post_type' => 'artist', 'order' => 'DCS', 'posts_per_page' => -1 );
                   query_posts( $args ); // hijack the main loop
                   while ( have_posts() ) : the_post();

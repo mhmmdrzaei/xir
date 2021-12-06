@@ -68,6 +68,10 @@ main {
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+	.xirwriting {
+		max-width: 160px;
+		top: 67%;
+	}
 }
 
 
@@ -194,7 +198,11 @@ video {
 	}
 }
 .page-id-51  {
-
+	ul.menu li a {
+		color:black;
+		text-shadow: 0 0 0 white;
+		text-shadow: none;
+	}
 	background-image: url(images/xarchieback.png); 
 }
 //single artist pages
@@ -310,3 +318,108 @@ video {
     @include fontSize(20);
     font-family: 'Pinyon Script', cursive;
 }
+
+.mobileSVG {
+	display: none;
+}
+
+//media quaries 
+
+@media(max-width: 550px){
+	main {
+		padding: 0 15px;
+	}
+	.hidden {
+		overflow: hidden;
+	}
+	header {
+		position: inherit;
+		ul.menu {
+			display: none;
+			padding-top: 50%;
+			li {
+				position: initial;
+				text-align: center;
+				a {
+					text-shadow: none;
+				}
+			}
+		}
+		ul.menuclicked {
+			display: block;
+			background: #e32aba;
+			height: 100vh;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 5;
+			margin: 0;
+		}
+		.mobileSVG {
+			width: 100%;
+			display: block;
+			text-align: center;
+			margin-top:15px;
+			cursor: pointer;
+			position: fixed;
+			z-index: 6;
+			right: 25%;
+			svg {
+				width: 60%;
+				top: 20px;
+				max-width: 180px;
+				path, circle {
+					fill: white;
+				}
+			}
+		}
+	}
+
+	// about page 
+
+	.aboutPage, .pageApply, .artistspage {
+    padding-top: 30vw;
+	}
+
+	//archives page
+
+	.page-id-51  {
+		ul.menu li a {
+			color:white ;
+		}
+		.mobileSVG svg circle, .mobileSVG svg path {
+			fill: black;
+		}
+		
+	}
+	.white {
+		fill: white;
+	}
+	.artistEach {
+		a .artistEachInfo {
+			width: 100%;
+			h1, h2 {
+				margin: 20px 0;
+			}
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+
+
+	//single artist page 
+
+	.social {
+		position: initial;
+		max-width: 100%;
+		-webkit-order: 2;
+	}
+	.artistSingle {
+		-webkit-order: 1;
+		width: 100%;
+	}
+
+ }
+

@@ -7,6 +7,7 @@
 <main>
     <section class="logo">
         <img src="<?php bloginfo('template_directory'); ?>/images/xirlogo.png" alt="Xir - Residency centre based in Toronto, Canada">
+        <img class="xirwriting"src="<?php bloginfo('template_directory'); ?>/images/xirwriting.png" alt="Xir - Residency centre based in Toronto, Canada">
     </section>
 
 </main>
