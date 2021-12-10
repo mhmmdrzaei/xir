@@ -1,15 +1,16 @@
 $(function(){
 	$('.xOpen').click(function(){
 		$('.xclickArtist').toggleClass('openX');
+		$('#menu-menu-1').removeClass('menuclicked');
 	})
 
 	
 
-	if ($(".page-id-51 .hidden")[0]){
+	if ($(".menuclicked")[0]){
     	// $("ul.menu li a").css('color','black');
     	// $("ul.menu li a").css('text-shadow','0 0 0 white');
-    	$('.mobileSVG svg path').css('fill','white');
-    	$('.mobileSVG svg circle').css('fill','white');
+    	// $('.menulicked').css('background','#4a24fe');
+
 	}
 	$('.mobileSVG').click(function(){
 		$('#menu-menu-1').toggleClass('menuclicked');

@@ -21,15 +21,55 @@ ul.menu {
 			text-shadow: 1px 1px 1px black;
 		}
 	}
+	li:nth-child(1){
+		&:hover {
+			animation: twoShake .3s infinite;
+		}
+	}
 	li:nth-child(2) {
 		right: 25px;
+
 	}
+	@keyframes twoShake {
+     0% {transform: translateX(0px)}
+    33% {transform: translateX(5px) }
+}
 	li:nth-child(3) {
 		bottom: 15px;
 		left: 25px;
+		&:hover {
+			animation: waveRight 3s ease-in-out infinite;
+		}
+	}
+	@keyframes waveRight {
+	     0% {transform:rotate(0deg) translateX(0px)}
+	    33% {transform:rotate(5deg) translateX(3px) }
 	}
 	li:nth-child(4) {
 		bottom: 15px;
 		right: 25px;
+		&:hover {
+			animation: waveLeft 5s infinite;
+		}
 	}
 }
+
+@keyframes waveLeft {
+     0% {transform:rotate(0deg) translateX(0px)}
+    33% {transform:rotate(-5deg) translateX(-7px) }
+}
+@keyframes skewSix {
+	0% {transform:skew(0deg,0deg)}
+	10% {transform:skew(10deg,10deg)}
+	30% {transform:skew(15deg,15deg)}
+	60% {transform:skew(10deg,10deg)}
+	100% {transform:skew(0deg,0deg)}
+}
+
+.menu-item-42 {
+	&:hover{
+		animation: skewSix 6s ease-in-out infinite;	
+	 }
+
+}
+

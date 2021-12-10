@@ -31,6 +31,7 @@ Default Styling
 
 body {
 	font-family: 'Kumbh Sans', sans-serif;
+	outline:none;
 }
 a {
 	color:black;
@@ -54,6 +55,30 @@ main {
 
 //home page 
 
+@keyframes puff-in-center {
+  0% {
+
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+
+  }
+  50% {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    opacity: 0.5;
+  }
+  100% {
+  	-webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+
+  }
+}
+
+
+
+
 .logo {
 	// display: flex;
 	// justify-content: center;
@@ -67,10 +92,16 @@ main {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		animation: puff-in-center 4.7s ;
+		
+
+	 
+
 	}
 	.xirwriting {
 		max-width: 160px;
 		top: 67%;
+		
 	}
 }
 
@@ -126,6 +157,15 @@ main {
 
 .openX{
 	display: block;
+	animation: fadein 2s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 svg {
 	position: absolute;
@@ -203,7 +243,15 @@ video {
 		text-shadow: 0 0 0 white;
 		text-shadow: none;
 	}
+	.current-menu-item a {
+		text-shadow: 2px 2px 3px #4a24fe !important;
+	}
 	background-image: url(images/xarchieback.png); 
+}
+.page-id-20, .page-id-18 {
+	.current-menu-item a {
+		text-shadow: 2px 2px 3px #FF2D95;
+	}
 }
 //single artist pages
 
@@ -243,6 +291,9 @@ video {
 		// position: relative;
 		// top: -30px;
 		// z-index: 0;
+		img {
+			max-width: 100%;
+		}
 		figure {
 			margin: 0 auto;
 			img {
@@ -273,7 +324,7 @@ video {
 //about Page 
 
 .aboutPage {
-	padding-top: 10vw;
+	padding-top: 8vw;
 
 	.wp-block-columns, p {
 		background: #e32aba;
@@ -318,6 +369,9 @@ video {
     @include fontSize(20);
     font-family: 'Pinyon Script', cursive;
 }
+.af-submit {
+	text-align: center;
+}
 
 .mobileSVG {
 	display: none;
@@ -355,12 +409,24 @@ video {
 			left: 0;
 			z-index: 5;
 			margin: 0;
+			animation: dropsin 3s;
+
 		}
+		@keyframes dropsin {
+		  0% {
+
+		  	top: -100vh;
+		  }
+		  100% {
+		  	top: 0;
+		  }
+		 }
+
 		.mobileSVG {
 			width: 100%;
 			display: block;
 			text-align: center;
-			margin-top:15px;
+			// margin-top:15px;
 			cursor: pointer;
 			position: fixed;
 			z-index: 6;
@@ -388,6 +454,9 @@ video {
 		ul.menu li a {
 			color:white ;
 		}
+		header ul.menuclicked {
+			background: #4a24fe;
+		}
 		.mobileSVG svg circle, .mobileSVG svg path {
 			fill: black;
 		}
@@ -401,6 +470,7 @@ video {
 			width: 100%;
 			h1, h2 {
 				margin: 20px 0;
+				text-align: center;
 			}
 		}
 		img {
@@ -413,13 +483,32 @@ video {
 
 	.social {
 		position: initial;
-		max-width: 100%;
-		-webkit-order: 2;
+		max-width: 90%;
+		// margin:0 auto;
+		order: 2;
+		text-align: center;
+		position: relative;
+		top: 68px;
 	}
 	.artistSingle {
-		-webkit-order: 1;
+		order: 1;
 		width: 100%;
+		margin-top: 40px;
 	}
 
+	//artist framed
+
+	.artistImageFramed {
+		svg {
+			display: none;
+		}
+	}
+	.xclickArtist {
+		width: 90%;
+
+		.artistImageFramed h2 {
+		position: relative;
+		}
+	}
  }
 
