@@ -12,6 +12,7 @@ $(function(){
     	// $('.menulicked').css('background','#4a24fe');
 
 	}
+
 	$('.mobileSVG').click(function(){
 		$('#menu-menu-1').toggleClass('menuclicked');
 		$('body').toggleClass('hidden');
