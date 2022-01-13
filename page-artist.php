@@ -2,15 +2,15 @@
 
 <?php get_header();  ?>
 <!-- <video crossorigin="anonymous" preload="auto" autoplay="" src="/gcs/national-parks-service/en-us/9f885369-a52a-4a0b-8b2f-f3e5e41cdd54.mp4" style="width: 1090px; height: 613px; position: absolute; top: 0px; left: -228px;"></video> -->
-<main class="artistspage">
+<main class="artistspage" aria-label="archive of past and current artists in residence at XiR">
      <?php $args = array( 'post_type' => 'artist', 'order' => 'DCS', 'posts_per_page' => -1 );
                   query_posts( $args ); // hijack the main loop
                   while ( have_posts() ) : the_post();
     ?>
-        <section class="artistEach">
+        <section class="artistEach" aria-label="Artis profile overview, with picture of the artist, artist name and year of residence">
           <a  class="artistPost" href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail('full'); ?>
-          <section class="artistEachInfo">
+          <section class="artistEachInfo" aria-label="Artist name and year of residence">
             <h1><?php the_title(); ?></h1>
             <h2><?php the_field('residence_year'); ?></h2>
           </section>

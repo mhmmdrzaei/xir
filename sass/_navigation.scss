@@ -19,6 +19,7 @@ ul.menu {
 			@include fontSize(28);
 			color: white;
 			text-shadow: 1px 1px 1px black;
+			text-decoration: none;
 		}
 	}
 	li:nth-child(1){

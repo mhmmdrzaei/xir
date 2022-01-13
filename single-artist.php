@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 <div class="backgroundtile" style="background-image: url('<?php the_post_thumbnail_url(); ?>;)"></div>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-  <section class="social">
+  
     <?php if( have_rows('social_media_links') ): ?>
+      <section class="social"aria-label="artists social media links">
         <?php while( have_rows('social_media_links') ): the_row();?>
             <a href="<?php the_sub_field('social_link') ?>">
 
@@ -22,14 +23,15 @@
                <?php };?>
               </a> 
         <?php endwhile; ?>
+      </section>
     <?php endif; ?>
     
-  </section>
-<main class="artistSingle">
-  <section class="artistSingleMain">
-    <h1><?php the_title(); ?></h1>
+
+<main class="artistSingle" >
+  <section class="artistSingleMain" aria-label="section about the artist with image and bio including other information">
+    <h1 aria-label="Artist's name"><?php the_title(); ?></h1>
     <section class="artistSingleContent">
-      <figure><?php the_post_thumbnail('full'); ?></figure>
+      <figure aria-label="<?php the_title(); ?>'s image"><?php the_post_thumbnail('full'); ?></figure>
       <?php the_content(); ?>
     </section>
             

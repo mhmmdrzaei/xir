@@ -2,7 +2,7 @@
 <div class="bg-video-wrap bg-video-about">
     <video src="<?php bloginfo('template_directory'); ?>/images/about1.mp4" loop muted autoplay>
 </div>
-<main class="aboutPage">
+<main class="aboutPage" aria-label="About Xir Residency centere located in Toronto, Canada for artists">
  
  <?php // Start the loop ?>
  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

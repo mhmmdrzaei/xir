@@ -39,7 +39,7 @@
 
 		</article><!-- #post-## -->
 
-		<?php comments_template( '', true ); ?>
+		<?php comments_template( '', false ); ?>
 
 
 <?php endwhile; // End the loop. Whew. ?>
