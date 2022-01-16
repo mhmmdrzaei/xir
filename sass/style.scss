@@ -102,7 +102,12 @@ main {
 		
 	}
 }
-
+//404 page
+.container404 {
+	text-align: center;
+	position: relative;
+	top: 30vh;
+}
 
 // x home page
 .xclickArtist {
@@ -114,9 +119,9 @@ main {
 	z-index: 3;
 	
 	.artistImageFramed{
-		position: relative;
-		top: 0;
-		left: 0;
+		// position: relative;
+		// top: 0;
+		// left: 0;
 		.image2 {
 		  position: absolute;
 		  top: -2vw;
@@ -127,13 +132,13 @@ main {
 		  
 		}
 		h2 {
-			position:absolute;
+			// position:absolute;
 			@include fontSize(20);
 			color: white;
 			text-shadow: 2px 2px 1px #4924ff;
-			    top: 30%;
-			    left: 2%;
-			    width: 90%;
+			    // top: 30%;
+			    // left: 2%;
+			    // width: 90%;
 		}
 	}
 
@@ -344,8 +349,13 @@ video {
 }
 .pageApply {
 	padding-top: 75px;
+	p {
+		background: white;
+		padding: 7px;
+	}
 	.acf-fields > .acf-field {
 		border-top:none;
+
 	}
 	.acf-input {
 		border: 2px solid #FF2D95;
@@ -452,7 +462,7 @@ video {
 				width: 60%;
 				top: 20px;
 				max-width: 190px;
-				animation: shakeShake .3s infinite;
+				animation: shakeShake .7s infinite;
 				// animation-duration: 10s;
 				path, circle {
 					fill: white;
@@ -463,8 +473,8 @@ video {
 	}
 
 		@keyframes shakeShake {
-     0% {transform: translateX(0px)}
-    33% {transform: translateX(3px) }
+     0% {transform: translateY(0px)}
+    33% {transform: translateY(3px) }
 }
 
 	video {

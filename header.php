@@ -31,15 +31,7 @@
           <div class="artistImageFramed" aria-label="picture of the current artist in residence">
           <?php the_post_thumbnail('full'); ?>
           <img class="image2" src="<?php bloginfo('template_directory'); ?>/images/xframe.png" alt="">
-          <h2>><?php the_title(); ?> <br> in residence</h2>
-          <svg viewBox="0 0 425">
-            <path id="curve" d="M6,150C49.65,93,105.79,36.65,156.2,47.55,207.89,58.74,213,131.91,264,150c40.67" />
-              <text x="25">
-                <textPath xlink:href="#curve">
-                Learn More
-               </textPath>
-               </text>
-          </svg>
+          <h2><?php the_title(); ?> in residence</h2>
           </div>
 
           </a>
