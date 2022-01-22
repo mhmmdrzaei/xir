@@ -1,6 +1,6 @@
 <?php get_header();  ?>
 <div class="bg-video-wrap bg-video-about">
-    <video src="<?php bloginfo('template_directory'); ?>/images/about1.mp4" loop muted autoplay>
+    <video src="<?php bloginfo('template_directory'); ?>/images/about1.webm" loop muted autoplay>
 </div>
 <main class="aboutPage" aria-label="About Xir Residency centere located in Toronto, Canada for artists">
  
