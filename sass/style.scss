@@ -402,7 +402,29 @@ video {
 .mobileSVG {
 	display: none;
 }
-
+//submissions:
+.page-id-140,.page-id-211 {
+	background: black;
+}
+.submissionsPage {
+	max-width: 1000px;
+}
+.fullwidthpost {
+	border: 1px solid black;
+	margin: 30px auto;
+	background: white;
+	padding: 10px;
+	.email, .questionHead {
+		font-weight: 700;
+	}
+	.question {
+		border-bottom: 1px solid grey;
+		padding-bottom: 15px;
+	}
+	.question:nth-last-child(1) {
+		border-bottom: none;
+	}
+}
 //media quaries 
 
 @media(max-width: 550px){

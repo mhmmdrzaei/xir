@@ -1,3 +1,4 @@
+<?php acf_form_head(); ?>
 <?php get_header();  ?>
 
 <main class="pageApply" aria-label="Sumbission form to apply for the residency">
