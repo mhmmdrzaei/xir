@@ -40,7 +40,7 @@
         <!-- </a> -->
       </h2>
       <section class="email">
-        <?php the_field('email_address'); ?>
+        <a href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a>
       </section>
       <section class="question">
         <p class='questionHead'>Where do you live?</p>
