@@ -578,3 +578,17 @@ video {
 	}
  }
 
+ @media print {
+	header, footer {
+		display: none;
+	}
+	.submissionsPage {
+		
+		article {
+			h2 {
+				font-family: serif;
+			}
+			page-break-before: always;
+		}
+	}
+ }
