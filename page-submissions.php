@@ -1,23 +1,25 @@
-<?php get_header();  ?>
+<?php get_header(); ?>
 
 <main class="submissionsPage">
     <?php // Start the loop ?>
 
-    <?php $args = array( 'post_type' => 'af_entry', 
-          // 'meta_key'      => 'start_date',
-          // 'orderby'      => 'meta_value',
-           'order'       => 'DESC',
-          // 'orderby' => array(
-          //    'meta_value_num' => 'desc',
-          //    'post_date' => 'desc'
-          'orderby'    => array(
-                'start_date' => 'DSC',
-                'post_date' => 'desc'
-              ),
-          'posts_per_page' => -1 );
-      query_posts( $args ); // hijack the main loop
-
-      if ( ! have_posts() ) : ?>
+    <?php $args = array(
+        'post_type' => 'af_entry',
+        // 'meta_key'      => 'start_date',
+        // 'orderby'      => 'meta_value',
+        'order' => 'DESC',
+        // 'orderby' => array(
+        //    'meta_value_num' => 'desc',
+        //    'post_date' => 'desc'
+        'orderby' => array(
+            'start_date' => 'DSC',
+            'post_date' => 'desc'
+        ),
+        'posts_per_page' => -1
+    );
+    query_posts($args); // hijack the main loop
+    
+    if (!have_posts()): ?>
 
     <article id="post-0" class="fullwidthpost">
         <h2 class="entry-title">No Submissions</h2>
@@ -29,19 +31,20 @@
     <?php endif; // end if there are no posts ?>
     <?php // if there are posts, Start the Loop. ?>
 
-    <?php while ( have_posts() ) : the_post(); ?>
+    <?php while (have_posts()):
+        the_post(); ?>
 
     <article id="post-<?php the_ID(); ?>" class="fullwidthpost">
         <h2 class="entry-title">
             <!--    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"> -->
-            <?php the_title(); ?> - <?php the_field('artist_name_pronouns'); ?>
+            <?php the_field('artist_name_pronouns'); ?>
 
 
             <!-- </a> -->
 
         </h2>
         <section class="pdf-download">
-            <a href="<?php echo esc_url( add_query_arg( array( 'post_id' => get_the_ID() ) ) ); ?>" target="_blank"
+            <a href="<?php echo esc_url(add_query_arg(array('post_id' => get_the_ID()))); ?>" target="_blank"
                 rel="noopener noreferrer" class="button">Download PDF</a>
         </section>
         <section class="email">
@@ -82,8 +85,8 @@
         <section class="uploadFile">
             <p class='questionHead'>In a single PDF please attach up to 10 samples of your work (if applicable)</p>
             <?php
-      $file = get_field('artist_artwork');
-      if( $file ): ?>
+                $file = get_field('artist_artwork');
+                if ($file): ?>
             <a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
             <?php endif; ?>
             <?php the_field(''); ?>
@@ -91,8 +94,8 @@
         <section class="uploadFile">
             <p class='questionHead'>Please attach your CV (if applicable)</p>
             <?php
-      $file = get_field('artist_cv');
-      if( $file ): ?>
+                $file = get_field('artist_cv');
+                if ($file): ?>
             <a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
             <?php endif; ?>
             <?php the_field(''); ?>
@@ -110,7 +113,7 @@
 
 
     <?php endwhile; // End the loop. Whew. ?>
-    <?php wp_reset_query();?>
+    <?php wp_reset_query(); ?>
 </main>
 
 

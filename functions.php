@@ -348,7 +348,7 @@ function generate_pdf_file($post_id)
 	$pdf_content .= '<p><strong>Artist Residency Use:</strong> ' . get_field('artist_residency_use', $post_id) . '</p>';
 	$pdf_content .= '<p><strong>Artist Accessibility:</strong> ' . get_field('artist_accessibility', $post_id) . '</p>';
 	$pdf_content .= '<p><strong>Artist Website:</strong> ' . get_field('artist_website', $post_id) . '</p>';
-	$pdf_content .= '<p><strong>Artist Semester:</strong> ' . get_field('artist_semester', $post_id) . '</p>';
+	$pdf_content .= '<p><strong>Artist Timeline:</strong> ' . get_field('artist_semester', $post_id) . '</p>';
 
 	// Add artwork file to PDF content
 	$file = get_field('artist_artwork', $post_id);
