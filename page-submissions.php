@@ -48,39 +48,39 @@
                 rel="noopener noreferrer" class="button">Download PDF</a>
         </section>
         <section class="email">
-            <a href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a>
+            <a href="mailto:<?php the_field('artist_email'); ?>"><?php the_field('artist_email'); ?></a>
         </section>
         <section class="question">
             <p class='questionHead'>Where do you live?</p>
-            <?php the_field('artist_location'); ?>
+            <?php echo get_field('artist_location'); ?>
         </section>
         <section class="question">
             <p class='questionHead'>Tell us about yourself (maximum 300 words).</p>
-            <?php the_field('artist_bio'); ?>
+            <?php echo get_field('artist_bio'); ?>
         </section>
         <section class="question">
             <p class='questionHead'>Tell us about your art practice (maximum 300 words). </p>
-            <?php the_field('artist_art_practice'); ?>
+            <?php echo get_field('artist_art_practice'); ?>
         </section>
         <section class="question">
             <p class='questionHead'>How would you spend your time at the residency? Will you be creating a specific
                 project, or using the time to do exploratory/experimental work? (maximum 500 words)</p>
-            <?php the_field('artist_residency_use'); ?>
+            <?php echo get_field('artist_residency_use'); ?>
         </section>
         <section class="question">
             <p class='questionHead'>This residency is designed to increase accessibility and visibility for
                 practitioners who have been structurally marginalized. How do you think XiR can assist you in this
                 sense? (maximum 500 words)</p>
-            <?php the_field('artist_accessibility'); ?>
+            <?php echo get_field('artist_accessibility'); ?>
         </section>
         <section class="question">
             <p class='questionHead'>Please provide a link to your website (if applicable)</p>
-            <a href=" <?php the_field('artist_website'); ?>"> <?php the_field('artist_website'); ?></a>
+            <a href=" <?php echo get_field('artist_website'); ?>"> <?php echo get_field('artist_website'); ?></a>
         </section>
         <section class="question">
             <p class='questionHead'>Which residency semester are you interested in? (select both if you don't have a
                 preference)</p>
-            <?php the_field('artist_semester'); ?>
+            <?php echo get_field('artist_semester'); ?>
         </section>
         <section class="uploadFile">
             <p class='questionHead'>In a single PDF please attach up to 10 samples of your work (if applicable)</p>
@@ -89,7 +89,7 @@
                 if ($file): ?>
             <a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
             <?php endif; ?>
-            <?php the_field(''); ?>
+          
         </section>
         <section class="uploadFile">
             <p class='questionHead'>Please attach your CV (if applicable)</p>
@@ -98,15 +98,14 @@
                 if ($file): ?>
             <a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
             <?php endif; ?>
-            <?php the_field(''); ?>
         </section>
         <section class="question">
             <p class='questionHead'>Do you have any specific accessibility requirements?</p>
-            <?php the_field('artist_accessibility'); ?>
+            <?php echo get_field('artist_accessibility'); ?>
         </section>
         <section class="question">
             <p class='questionHead'>Do you have any questions for us?</p>
-            <?php the_field('artist_questions'); ?>
+            <?php echo get_field('artist_questions'); ?>
         </section>
 
     </article><!-- #post-## -->
